@@ -1,0 +1,9 @@
+<section class="columns eight offset-by-two">
+    <% @items.each do |item| %>
+        <h2 class="item"><%= item.name %></h2>
+        <p class="category"><%= item.category %></p>
+        <p class="description"><%= item.description %></p>
+        <p class="post-date"><%= item.created_at.strftime("Posted %m/%d/%Y") %></p>
+        <h5><span><%= link_to "Edit", edit_item_path(item)%></span> | <span><%= link_to "Delete", item, method: :delete %></span></h5>
+    <% end %>
+</section>

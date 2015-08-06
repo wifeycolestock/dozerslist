@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOZERSLIST</title>
+  <%= stylesheet_link_tag 'application', '//fonts.googleapis.com/css?family=Patua+One' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <header class="u-ct">
+        <img id="logo" src="http://static.colestock.com/images/dozerslist-logo-301x108.png" alt="Dozerslist Logo">
+    </header>
+    <div id="navigation">
+        <nav class="container">
+            <ul>
+                <li><%= link_to "Post Item", new_item_path %></li>
+                <li><%= link_to "View List", items_path %></li>
+            </ul>
+        </nav>
+    </div>
+    <main id="content" class="container">
+        <%= yield %>
+    </main>
+    <footer></footer>
+</body>
+</html>
+

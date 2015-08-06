@@ -1,0 +1,28 @@
+<%= form_for @item do |f| %>
+    <div>
+        <%= f.label 'Item:' %>
+        <%= f.text_field :name, 
+                         required: 'true', 
+                         pattern: '.{2,50}', 
+                         title: 'Provide item name (2-50 characters)'
+        %>
+    </div>
+    <div>
+        <%= f.label 'Description:' %>
+        <%= f.text_area :description, 
+                         required: 'true', 
+                         minlength: 10,
+                         maxlength: 1024 
+        %>
+    </div>
+    <div>
+        <%= f.label 'Category:'%>
+        <%= f.select :category, 
+                     ['ELECTRONICS','FREE','SERVICES','UNCLASSIFIED','WANTED'],
+                     required: 'true' 
+        %>
+    </div>  
+    <div>
+        <%= f.submit 'Post Item' %>
+    </div>
+<% end %>

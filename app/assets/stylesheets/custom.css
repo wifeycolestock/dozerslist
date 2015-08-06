@@ -1,0 +1,102 @@
+/* Override Baseline Styles */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Patua One';
+    font-size: 1.7em;
+}
+
+pre, blockquote, dl, figure, table, p, ul, ol, form {
+    margin-bottom: 1.5rem;
+}
+
+/* Utilities */
+.u-ct {
+    text-align: center;
+}
+
+/* Site Styles */
+header {
+    margin: 1rem 0 0 0;
+}
+
+#navigation {
+    background-color: #cd3539;
+}
+
+#navigation ul {
+    text-align: center;
+    margin-bottom: 0;
+} 
+
+#navigation ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+}
+
+#navigation ul li a {
+    display: inline-block;
+    line-height: 49px;
+    padding: 0 15px;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #ffffff;
+    letter-spacing: 0.07em;
+}
+
+#navigation ul li a:hover {
+    background-color: #832f32;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#content {
+    margin: 1.5rem auto;
+}
+
+footer {
+    height: 68px;
+    background-color: #444444;
+}
+
+/* Page Styles */
+#new_item, .edit_item {
+   max-width: 400px;
+   margin: 0 auto;
+}
+
+#new_item input[type=text], 
+#new_item textarea,
+.edit_item input[type="text"],
+.edit_item textarea {
+    width: 88%;
+}
+
+#item_description { 
+    min-height: 200px;
+}
+
+.item {
+    text-shadow: -1px -1px 0 #fec72c, 1px -1px 0 #fec72c, -1px 1px 0 #fec72c, 1px 1px 0 #fec72c;
+}
+
+.post-date, .category {
+    font-size: .8em;
+    color: #444444;
+}
+
+
+/* Media Queries */
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+    h1 {
+        font-size: 4.0rem;
+    }
+}
